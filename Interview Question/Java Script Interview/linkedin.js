@@ -43,14 +43,122 @@
 // }
 // console.log(animals)
 
-if(true)
+// if(true)
+// {
+//     var first='you';
+// }
+
+// function fScope(){
+//     var second="got this";
+// }
+// // fScope();
+// // console.log(first)
+// console.log(second);
+
+// pollyfills using map
+
+
+// function MyArray()
+// {
+//     this.length=0;
+   
+  
+// }
+// MyArray.prototype.push=function (element){
+//     this[this.length]=element; 
+//     this.length++;
+//     return element;
+// }
+// MyArray.prototype.printarr=function(){
+//     let arr="[ "
+//     for(let i=0;i<this.length;i++)
+//     {
+//         if(i==this.length-1)
+//         {
+//             arr+=this[i]; 
+//         }
+//         else
+//         arr+=this[i]+",";
+
+//     }
+//     arr+=" ]"
+//     console.log(arr);
+    
+// }
+// MyArray.prototype.mymap=function(cb)
+// {
+//     let arr=[]
+//     for(let i=0;i<this.length;i++)
+//     {
+//         arr.push(cb(this[i],i,this))
+//     }
+//     return arr;
+// }
+// MyArray.prototype.myfilter=function(cb)
+// {
+//     let arr=[];
+//     for(let i=0;i<this.length;i++)
+//     {
+//         if(cb(this[i],i,this))
+//         {
+//             arr.push(this[i]);
+//         }
+//     }
+//     return arr;
+// }
+
+
+// let arr= new MyArray()
+
+// arr.push(10);
+// // console.log(arr)
+
+// arr.push(30);
+// arr.push(50);
+// // arr.printarr();
+// let filterarr=arr.myfilter((element,i)=>{
+//     if(element==90)
+//     {
+//         return element;
+//     }
+   
+
+// })
+// console.log(filterarr)
+
+// console.log(arr);
+// let newarr=arr.mymap((element,i)=>{
+//     return element*5;
+// })
+// // console.log(arr[1]);
+// console.log(newarr);
+
+
+
+// curring
+function curry(func)
 {
-    var first='you';
+    return function  currying(...args)
+    {
+        if(args.length>=func.length)
+        {
+            return func(...args)
+        }
+        else
+        {
+            return function(...nextargs)
+            {
+                return currying(...args, ...nextargs)
+            }
+        }
+    }
 }
 
-function fScope(){
-    var second="got this";
+function sum(a,b,c,d)
+{
+    return a+b+c+d;
 }
-// fScope();
-// console.log(first)
-console.log(second);
+
+let curridsum=curry(sum);
+
+console.log(curridsum(1)(2,3)(5));

@@ -194,7 +194,7 @@ function.
 - A higher-order component also shortly known as HOC is an advanced technique for
   reusing component logic. It is not a part of the React API, but they are a pattern which
   emerges from React’s compositional nature.
-- Higher Order Components (HOC) in React are a design pattern that allows developers to reuse component logic. HOCs are a way to share behavior among components. They are a higher-order function that takes a component as an argument and returns a new component with additional functionality. The returned component is a "wrapped" version of the original component, with the added functionality being provided by the HOC. This allows for code reuse and separation of concerns, making it easier to manage and maintain the codebase. HOCs are often used for tasks such as authentication, performance optimization, and props manipulation.
+- Higher Order Components (HOC) in React are a `design pattern` that allows developers to reuse component logic. HOCs are a way to share behavior among components. They are a higher-order function that takes a component as an argument and returns a new component with additional functionality. The returned component is a "wrapped" version of the original component, with the added functionality being provided by the HOC. This allows for code reuse and separation of concerns, making it easier to manage and maintain the codebase. HOCs are often used for tasks such as authentication, performance optimization, and props manipulation.
 
 ### Explain the Presentational segment
 
@@ -276,8 +276,10 @@ Empty tags are used in React for declaring fragments.
 
 ### Explain strict mode
 
-StrictMode allows you to run checks and warnings for react components. It runs only on
+- StrictMode allows you to run checks and warnings for react components. It runs only on
 development build. It helps you to highlight the issues without rendering any visible UI.
+
+- StrictMode is a tool added in version 16.3 of React to highlight potential problems in an application. It performs additional checks on the application.
 
 ### What are reacted portals?
 
@@ -388,4 +390,9 @@ A Single Page Application (SPA) is a web application or website that loads a sin
 * Compared to the “traditional” application, SPA is less secure. Due to Cross-Site Scripting (XSS), it enables attackers to inject client-side scripts into web application by other users.
 
 
+
 ```
+### What is UseMemo?
+It is a React hook that is used for caching CPU-Expensive functions.
+Sometimes in a React app, a CPU-Expensive function gets called repeatedly due to re-renders of a component, which can lead to slow rendering.
+useMemo( ) hook can be used to cache such functions. By using useMemo( ), the CPU-Expensive function gets called only when it is needed.
