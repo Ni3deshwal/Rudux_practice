@@ -227,7 +227,7 @@ function curry(func) {
     if (args.length >= func.length) {
       return func(...args);
     } else {
-      return function (...nexztargs) {
+      return function (...nextargs) {
         return curried(...args, ...nextargs);
       };
     }
