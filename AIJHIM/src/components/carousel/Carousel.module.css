@@ -1,11 +1,20 @@
 /* src/components/Carousel.module.css */
 .carousel {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carouselImage {
-    width: 100%;
-    height: auto;
-  }
-  
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carouselImage.active {
+  display: block;
+  opacity: 1;
+}

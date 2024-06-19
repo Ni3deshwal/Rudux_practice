@@ -1,15 +1,15 @@
 // src/components/Footer.js
 import React from "react";
 import styles from "./Footer.module.css";
+import aijhimlogo from "../../assets/images/aijhimlogo.png";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
+      <div className={styles.logo}>
+        <img src={aijhimlogo} alt="College Logo" />
+      </div>
       <div className={styles.footerContainer}>
-        <div className={styles.logo}>
-          <img src="logo.png" alt="College Logo" />
-          <p>@jat_college</p>
-        </div>
         <div className={styles.contactInfo}>
           <p>📞 9416515494 (9 A.M. to 4 P.M.)</p>
           <p>📞 9416515495 (9 A.M. to 4 P.M.)</p>

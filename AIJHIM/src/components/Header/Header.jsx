@@ -1,13 +1,13 @@
 // src/components/Header.js
 import React from "react";
 import styles from "./Header.module.css";
+import aijhimlogo from "../../assets/images/aijhimlogo.png";
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="logo.png" alt="College Logo" />
-        <h1>AIJHIM</h1>
+        <img src={aijhimlogo} alt="College Logo" />
       </div>
       <nav>
         <ul className={styles.navList}>
